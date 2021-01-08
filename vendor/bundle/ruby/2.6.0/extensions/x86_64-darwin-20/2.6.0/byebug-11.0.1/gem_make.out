@@ -1,0 +1,19 @@
+current directory: /Users/ayano.k/workspace/mofumofu/dev-exam/vendor/bundle/ruby/2.6.0/gems/byebug-11.0.1/ext/byebug
+/Users/ayano.k/.rbenv/versions/2.6.3/bin/ruby -I /Users/ayano.k/.rbenv/versions/2.6.3/lib/ruby/2.6.0 -r ./siteconf20210105-9781-aklnr7.rb extconf.rb
+creating Makefile
+
+current directory: /Users/ayano.k/workspace/mofumofu/dev-exam/vendor/bundle/ruby/2.6.0/gems/byebug-11.0.1/ext/byebug
+make "DESTDIR=" clean
+
+current directory: /Users/ayano.k/workspace/mofumofu/dev-exam/vendor/bundle/ruby/2.6.0/gems/byebug-11.0.1/ext/byebug
+make "DESTDIR="
+compiling breakpoint.c
+compiling byebug.c
+compiling context.c
+compiling locker.c
+compiling threads.c
+linking shared-object byebug/byebug.bundle
+
+current directory: /Users/ayano.k/workspace/mofumofu/dev-exam/vendor/bundle/ruby/2.6.0/gems/byebug-11.0.1/ext/byebug
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 byebug.bundle ./.gem.20210105-9781-6zyyvq/byebug

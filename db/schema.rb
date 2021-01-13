@@ -10,7 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_01_08_082730) do
+ActiveRecord::Schema.define(version: 2021_01_10_124835) do
+
+  create_table "nearest_stations", force: :cascade do |t|
+    t.string "line"
+    t.string "station"
+    t.integer "minuites_walk"
+    t.integer "property_id"
+    t.index ["property_id"], name: "index_nearest_stations_on_property_id"
+  end
 
   create_table "properties", force: :cascade do |t|
     t.string "name"

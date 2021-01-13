@@ -1,5 +1,5 @@
-<h1>物件編集</h1>
-<%= form_with(model: @property) do |form| %>
+<h1>物件登録</h1>
+<%= form_with(model: @property, local: true) do |form| %>
 
 <% if @property.errors.any? %>
 <div class="alert alert-warning">
@@ -11,27 +11,49 @@
 </div>
 <% end %>
 
-  <div class="property_name">
-    <%= form.label :'物件名' %><br>
-    <%= form.text_field :name %>
-  </div>
-  <div class="property_rent">
-    <%= form.label :'賃料' %><br>
-    <%= form.text_field :rent %>円
-  </div>
-  <div class="property_address">
-    <%= form.label :'住所' %><br>
-    <%= form.text_field :address %>
-  </div>
-  <div class="property_age">
-    <%= form.label :'築年数' %><br>
-    <%= form.text_field :age %>年
-  </div>
-  <div class="property_content">
-    <%= form.label :'備考' %><br>
-    <%= form.text_field :content %>
-  </div>
-  <hr>
-  <%= form.submit %>
+<div class="property_name">
+  <%= form.label :'物件名' %><br>
+  <%= form.text_field :name %>
+</div>
+<div class="property_rent">
+  <%= form.label :'賃料' %><br>
+  <%= form.text_field :rent %>円
+</div>
+<div class="property_address">
+  <%= form.label :'住所' %><br>
+  <%= form.text_field :address %>
+</div>
+<div class="property_age">
+  <%= form.label :'築年数' %><br>
+  <%= form.text_field :age %>年
+</div>
+<div class="property_content">
+  <%= form.label :'備考' %><br>
+  <%= form.text_field :content %>
+</div>
+<hr>
+
+<% count=1 %>
+<%= form.fields_for :nearest_stations do |form| %>
+<h3>最寄駅<%= count %></h3>
+<div class="nearest_staiom_line">
+  <%= form.label :'路線名' %><br>
+  <%= form.text_field :line %>
+</div>
+<div class="nearest_staiom_station">
+  <%= form.label :'駅名' %><br>
+  <%= form.text_field :station %>
+</div>
+<div class="nearest_staiom_minuites_walk">
+  <%= form.label :'徒歩分数' %><br>
+  <%= form.text_field :minuites_walk %>
+</div>
+<% count+=1 %>
+<% end %>
+
+
+
+<%= form.submit %>
+
 <% end %>
 <%= link_to '物件一覧画面に戻る', properties_path %>

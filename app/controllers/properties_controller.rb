@@ -44,6 +44,7 @@ class PropertiesController < ApplicationController
   def property_params
     params.require(:property).permit(:name, :age, :rent, :address, :content, nearest_stations_attributes: {})
   end
+
   def set_property
     @property = Property.find(params[:id])
   end

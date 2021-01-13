@@ -4,5 +4,19 @@ class Property < ApplicationRecord
   validates :address,  presence: true, length: { maximum: 30 }
   validates :age,  presence: true, numericality: { greater_than_or_equal_to: 0}
   has_many :nearest_stations, dependent: :destroy
-  accepts_nested_attributes_for :nearest_stations, allow_destroy: true
+  accepts_nested_attributes_for :nearest_stations, reject_if: lambda { |attributes| attributes['line'].blank? || attributes['station'].blank? || attributes['minutes_walk'].blank?},allow_destroy: true
+
+#  def reject_blank(attributes)
+#    attributes[:line].blank?
+#    attributes[:station].blank?
+  #  attributes[:minuites_walk].blank?
+#  end
 end
+
+
+#if attributes[:id]
+  #    attributes.merge!(_destroy: "1") if attributes[:face].blank? and attributes[:flip].blank?
+  #    !attributes[:face].blank? and attributes[:flip].blank?
+  #  else
+  #    attributes[:face].blank? and attributes[:flip].blank?
+  #  end

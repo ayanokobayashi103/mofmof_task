@@ -1,0 +1,15 @@
+current directory: /Users/ayano.k/workspace/mofumofu/dev-exam/vendor/bundle/ruby/2.6.0/gems/debug_inspector-1.0.0/ext/debug_inspector
+/Users/ayano.k/.rbenv/versions/2.6.3/bin/ruby -I /Users/ayano.k/.rbenv/versions/2.6.3/lib/ruby/2.6.0 -r ./siteconf20210108-15330-10q0359.rb extconf.rb
+creating Makefile
+
+current directory: /Users/ayano.k/workspace/mofumofu/dev-exam/vendor/bundle/ruby/2.6.0/gems/debug_inspector-1.0.0/ext/debug_inspector
+make "DESTDIR=" clean
+
+current directory: /Users/ayano.k/workspace/mofumofu/dev-exam/vendor/bundle/ruby/2.6.0/gems/debug_inspector-1.0.0/ext/debug_inspector
+make "DESTDIR="
+compiling debug_inspector.c
+linking shared-object debug_inspector.bundle
+
+current directory: /Users/ayano.k/workspace/mofumofu/dev-exam/vendor/bundle/ruby/2.6.0/gems/debug_inspector-1.0.0/ext/debug_inspector
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 debug_inspector.bundle ./.gem.20210108-15330-pcvek2

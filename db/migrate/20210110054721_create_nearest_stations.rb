@@ -4,6 +4,7 @@ class CreateNearestStations < ActiveRecord::Migration[5.2]
       t.string "line"
       t.string "station"
       t.integer "minuites_walk"
+      t.timestamps
     end
   end
 end

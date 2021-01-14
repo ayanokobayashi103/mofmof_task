@@ -16,6 +16,8 @@ ActiveRecord::Schema.define(version: 2021_01_10_124835) do
     t.string "line"
     t.string "station"
     t.integer "minuites_walk"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.integer "property_id"
     t.index ["property_id"], name: "index_nearest_stations_on_property_id"
   end
@@ -26,6 +28,8 @@ ActiveRecord::Schema.define(version: 2021_01_10_124835) do
     t.string "address"
     t.integer "age"
     t.text "content"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end

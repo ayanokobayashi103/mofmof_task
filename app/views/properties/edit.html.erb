@@ -33,25 +33,21 @@
 </div>
 <hr>
 
-<% count=1 %>
 <%= form.fields_for :nearest_stations do |form| %>
-<h3>最寄駅<%= count %></h3>
-<div class="nearest_staiom_line">
+<h3>最寄駅<%= form.index + 1 %></h3>
+<div class="fields">
   <%= form.label :'路線名' %><br>
   <%= form.text_field :line %>
 </div>
-<div class="nearest_staiom_station">
+<div class="fields">
   <%= form.label :'駅名' %><br>
   <%= form.text_field :station %>
 </div>
-<div class="nearest_staiom_minuites_walk">
+<div class="fields">
   <%= form.label :'徒歩分数' %><br>
   <%= form.text_field :minuites_walk %>
 </div>
-<% count+=1 %>
 <% end %>
-
-
 
 <%= form.submit %>
 
